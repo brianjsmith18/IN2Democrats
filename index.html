@@ -442,6 +442,45 @@
             color: var(--rust-belt);
             text-decoration: none;
         }
+        /* ========================================= */
+        /* --- DONATION BUTTON HOVER STYLES --- */
+        /* ========================================= */
+
+        .donate-grid-fixed {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 30px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .donate-box {
+            background-color: #FCD116 !important;
+            color: #0A1C3B !important;
+            padding: 20px 10px !important; /* Increased padding makes them taller */
+            width: 150px !important; /* Forces every box to be exactly 150px wide */
+            box-sizing: border-box !important;
+            font-family: sans-serif !important;
+            font-size: 1.8rem !important; /* Slightly larger text */
+            font-weight: bold !important;
+            text-decoration: none !important;
+            border-radius: 6px !important; /* Slightly softer corners */
+            text-align: center !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2) !important;
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important; /* The magic animation rule */
+            display: block !important;
+        }
+
+        /* This controls what happens when the mouse hovers over the box */
+        .donate-box:hover {
+            transform: translateY(-8px) !important; /* Lifts the box up by 8 pixels */
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3) !important; /* Makes the shadow larger to simulate lifting */
+            text-decoration: none !important;
+            color: #0A1C3B !important;
+        }
+        
     </style>
 </head>
 <body>
