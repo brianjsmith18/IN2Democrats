@@ -297,31 +297,30 @@
 
     <!-- Header & Navigation -->
     <header>
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html" style="color: inherit; text-decoration: none;">
-                    <h2>IN-02 <span>DEMS</span></h2>
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#about" class="nav-item">Our Party</a>
-                <a href="rudy-facts.html" class="nav-item" style="color: var(--rust-belt); text-decoration: underline;">Rudy's Record</a>
-                <a href="index.html#events" class="nav-item">Events</a>
-                <a href="https://secure.actblue.com" class="btn btn-red" style="color: white; border-color: var(--rust-belt);">Donate</a>
-            </nav>
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none;">
+                <h2>IN-02 <span>DEMS</span></h2>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html#about" class="nav-item">Our Party</a>
+            <a href="rudy-facts.html" class="nav-item" style="color: var(--rust-belt); text-decoration: underline;">Rudy's Record</a>
+            <a href="index.html#events" class="nav-item">Events</a>
+            <a href="https://secure.actblue.com" class="btn btn-red" style="color: white; border-color: var(--rust-belt);">Donate</a>
+        </nav>
+    </div> <!-- This closing tag was missing! -->
+</header>
 
-            <div class="ms-graphic-container">
-                <div class="ms-eyebrow">The Extreme Record</div>
-                <h2 class="ms-headline">YAKYM VOTES AGAINST <br><span class="ms-highlight">HOOSIER FAMILIES.</span></h2>
-                <div class="ms-body">
-                While IN-02 families face rising costs, Rudy Yakym is focused on passing massive spending cuts, blocking accountability, and defending extreme mandates. He's working for Washington, not us.
-                </div>
-            <div>
-            <a href="#donate" class="ms-cta-btn">Hold Him Accountable ➔</a>
-            </div>
-    </header>
-
-    </style>
+<!-- Graphic is now safely OUTSIDE the header -->
+<div class="ms-graphic-container">
+    <div class="ms-eyebrow">The Extreme Record</div>
+    <h2 class="ms-headline">YAKYM VOTES AGAINST <br><span class="ms-highlight">HOOSIER FAMILIES.</span></h2>
+    <div class="ms-body">
+        While IN-02 families face rising costs, Rudy Yakym is focused on passing massive spending cuts, blocking accountability, and defending extreme mandates. He's working for Washington, not us.
+    </div>
+    <a href="#donate" class="ms-cta-btn">Hold Him Accountable ➔</a>
+</div> <!-- This closing tag was missing! -->
 
     <!-- Hero Section -->
     <section class="hero">
