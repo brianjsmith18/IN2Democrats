@@ -58,10 +58,74 @@
     </div>
     <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="#">Privacy Policy</a>
+        <button class="footer-link-btn" id="privacy-policy-link">Privacy Policy</button>
         <a href="#">Contact</a>
     </div>
-</footer>`;
+</footer>
+<div id="privacyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
+    <div class="modal-content privacy-modal-content">
+        <button class="close-btn" aria-label="Close">&times;</button>
+        <h2 id="privacy-modal-title">Privacy Policy</h2>
+        <p class="privacy-effective">Effective Date: January 1, 2026</p>
+
+        <div class="privacy-body">
+            <p>The Indiana 2nd Congressional District Democratic Committee ("IN-02 Democrats," "we," "us," or "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+
+            <h3>1. Information We Collect</h3>
+            <p>We collect information you provide directly to us, including:</p>
+            <ul>
+                <li><strong>Contact information</strong> — name, email address, phone number, and mailing address when you sign up, volunteer, donate, or submit an event.</li>
+                <li><strong>Event submissions</strong> — event details and organizer contact information submitted through our events form.</li>
+                <li><strong>Donation information</strong> — processed securely through ActBlue. We do not store payment card information on our servers.</li>
+            </ul>
+            <p>We may also collect limited technical information automatically, such as your browser type, IP address, and pages visited, through standard web server logs.</p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Send you updates, event announcements, and organizing information</li>
+                <li>Coordinate volunteer activities and respond to your requests</li>
+                <li>Review and publish community event submissions</li>
+                <li>Comply with federal and state campaign finance disclosure requirements</li>
+                <li>Improve our website and communications</li>
+            </ul>
+
+            <h3>3. Sharing Your Information</h3>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with:</p>
+            <ul>
+                <li><strong>The Indiana Democratic Party</strong> and affiliated Democratic organizations for organizing and electoral purposes</li>
+                <li><strong>Service providers</strong> (such as Action Network and ActBlue) who help us operate our website and process donations — these providers are bound by their own privacy policies</li>
+                <li><strong>Legal authorities</strong> when required by law or campaign finance regulations</li>
+            </ul>
+
+            <h3>4. Third-Party Services</h3>
+            <p>This website uses the following third-party services, each with their own privacy practices:</p>
+            <ul>
+                <li><strong>Action Network</strong> — volunteer and supporter signup forms</li>
+                <li><strong>ActBlue</strong> — secure online donation processing</li>
+                <li><strong>Amazon Web Services (AWS)</strong> — website hosting and event data storage</li>
+                <li><strong>Google Fonts</strong> — typeface delivery</li>
+            </ul>
+
+            <h3>5. Cookies</h3>
+            <p>Our website may use cookies and similar technologies to improve your browsing experience and analyze site traffic. You can control cookies through your browser settings. Disabling cookies will not prevent you from using our site.</p>
+
+            <h3>6. Data Security</h3>
+            <p>We implement reasonable technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+
+            <h3>7. Your Rights</h3>
+            <p>You may request to access, correct, or delete your personal information at any time by contacting us. To unsubscribe from our communications, use the unsubscribe link in any email we send you.</p>
+
+            <h3>8. Changes to This Policy</h3>
+            <p>We may update this privacy policy from time to time. We will post any changes on this page with an updated effective date.</p>
+
+            <h3>9. Contact Us</h3>
+            <p>If you have questions about this privacy policy or our data practices, please contact us at:<br>
+            <strong>Indiana 2nd Congressional District Democratic Committee</strong><br>
+            Indiana, United States</p>
+        </div>
+    </div>
+</div>`;
     }
 
     // ------------------------------------------------------------------
@@ -130,6 +194,18 @@
         });
     }
 
+    function initPrivacyModal() {
+        const modal    = document.getElementById('privacyModal');
+        const openBtn  = document.getElementById('privacy-policy-link');
+        const closeBtn = modal?.querySelector('.close-btn');
+        if (!modal || !openBtn) return;
+
+        openBtn.addEventListener('click', () => { modal.style.display = 'block'; });
+        closeBtn?.addEventListener('click', () => { modal.style.display = 'none'; });
+        window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.style.display = 'none'; });
+    }
+
     // Replaces a placeholder element with one or more injected elements
     function replaceElement(el, html) {
         const tmp = document.createElement('div');
@@ -153,6 +229,7 @@
 
     if (footerPlaceholder) {
         replaceElement(footerPlaceholder, buildFooter());
+        initPrivacyModal();
     }
 
     initModal();

@@ -253,14 +253,25 @@ footer {
 
 .footer-links { margin-top: 10px; }
 
-.footer-links a {
+.footer-links a,
+.footer-link-btn {
     color: var(--blue-sky);
     margin: 0 15px;
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: 800;
+    font-family: var(--font-sans);
 }
-.footer-links a:hover { color: var(--heartland-yellow); }
+.footer-links a:hover,
+.footer-link-btn:hover { color: var(--heartland-yellow); }
+
+.footer-link-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}
 
 /* ---- Modal ---- */
 .modal {
@@ -362,6 +373,58 @@ footer {
     letter-spacing: 1px !important;
     font-size: 1.2rem !important;
     margin-top: 15px !important;
+}
+
+/* ---- Privacy Modal ---- */
+.privacy-modal-content {
+    max-width: 680px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.privacy-modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+.privacy-effective {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0 0 1.5rem;
+    text-align: left;
+}
+
+.privacy-body h3 {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--strato-blue);
+    margin: 1.5rem 0 0.5rem;
+    border-bottom: 2px solid var(--heartland-yellow);
+    padding-bottom: 0.25rem;
+}
+
+.privacy-body p {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-body ul {
+    margin: 0.25rem 0 0.75rem 1.25rem;
+}
+
+.privacy-body ul li {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0.35rem;
 }
 
 /* ---- Mobile ---- */
