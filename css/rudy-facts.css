@@ -178,6 +178,40 @@ header { border-bottom-color: var(--rust-belt); }
     color: var(--strato-blue);
 }
 
+.fact-source {
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.fact-source a {
+    color: var(--rust-belt);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.fact-source a:hover { color: var(--rust-dark); }
+
+.score-source {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+}
+
+.score-source:hover { color: var(--heartland-yellow); }
+
 /* ---- CTA ---- */
 .take-action {
     background-color: var(--calumet);
